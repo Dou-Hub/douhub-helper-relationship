@@ -23,7 +23,7 @@ import graphDb from "../../libs/graph-db";
 
 export const processSNSDataToGraphDb = async (event, context, callback) => {
 
-    if (_.callFromAWSEvents(event)) return;
+    if (callFromAWSEvents(event)) return;
 
     //loop through batch SNS records
     const result = await _.processSNSRecords(event.Records, async (record) => {
